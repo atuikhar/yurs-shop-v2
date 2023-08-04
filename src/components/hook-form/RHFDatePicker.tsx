@@ -12,7 +12,7 @@ import dayjs from 'dayjs';
 
 //icons
 import { Icon } from '@iconify/react';
-import { BEIGE } from 'src/theme/palette';
+import { BEIGE } from '@/theme/palette';
 
 const InfoIcon = styled(Box)(({ theme }) => ({
   marginRight: theme.spacing(0.5),

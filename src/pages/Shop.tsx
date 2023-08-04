@@ -2,10 +2,10 @@
 import { Typography } from '@mui/material';
 
 //components
-import Page from 'src/pages/Page';
+import Page from '@/pages/Page';
 
 //styled components
-import { Container } from 'src/components/shared-styles/style';
+import { Container } from '@/components/shared-styles/style';
 
 //................................................
 

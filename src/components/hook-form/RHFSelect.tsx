@@ -19,7 +19,7 @@ import {
 import { Icon } from '@iconify/react';
 
 import 'react-phone-number-input/style.css';
-import { BEIGE } from 'src/theme/palette';
+import { BEIGE } from '@/theme/palette';
 
 // ----------------------------------------------------------------------
 
