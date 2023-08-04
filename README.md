@@ -1,9 +1,9 @@
-# abc / Frontend
+# yurs-shop / Frontend
 
 ```
-Copyright (c) 2023-present abc. All Rights Reserved.
-Proprietary and confidential information of abc.
-Disclosure, use, or reproduction without written authorization of abc is prohibited.
+Copyright (c) 2023-present yurs-shop. All Rights Reserved.
+Proprietary and confidential information of yurs-shop.
+Disclosure, use, or reproduction without written authorization of yurs-shop is prohibited.
 ```
 
 ## Table of Contents
@@ -60,18 +60,14 @@ Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-To learn React, check out the [React documentation](https://reactjs.org/).
-
 ## TECH STACK
 
 Please be familiar with
 
 - [TypeScript](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
-- [React.js](https://reactjs.org/) + hooks
+- [React.js](https://reactjs.org/)
 - [Material-UI](https://material-ui.com/components/paper/)
+- [Vite - Next Generation Frontend Tooling](https://vitejs.dev/)
 
 ## GIT RULES
 
@@ -79,10 +75,6 @@ Please be familiar with
 
   - Please always take a pull from main to keep the branch up-to-date with
     the base branch (usually main(master)).
-
-    ```
-
-    ```
 
 - Always commit in reference to the module and the story. Here's the convention for various scenarios:
 
