@@ -12,7 +12,7 @@ export default function Page({ children, title }: PageProps) {
   return (
     <>
       <Helmet>
-        <title>{`${title} | Que`}</title>
+        <title>{`${title} | yurs-shop`}</title>
       </Helmet>
 
       {children}
