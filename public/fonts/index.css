@@ -1,0 +1,219 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 300;
+  font-style: normal;
+  src: local('Open Sans'), url('OpenSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-style: normal;
+  src: local('Open Sans'), url('OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-style: normal;
+  src: local('Open Sans'), url('OpenSans-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 700;
+  font-style: normal;
+  src: local('Open Sans'), url('OpenSans-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 800;
+  font-style: normal;
+  src: local('Open Sans'), url('OpenSans-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Parabole';
+  font-weight: 400;
+  font-style: normal;
+  src: local('Parabole'), url('Parabole.ttf') format('truetype');
+}
+
+ .rdrDefinedRangesWrapper {
+   display: none;
+ }
+
+.rdrMonths{
+  background:#EEEBE1 ;
+}
+
+.rdrCalendarWrapper{
+  background: #EEEBE1;
+}
+
+.rdrMonthAndYearWrapper{
+padding-top: 0 !important;
+}
+.rdrNextPrevButton{
+  background: #EEEBE1 !important
+}
+.rdrDateDisplayWrapper {
+  background: #EEEBE1 !important;
+  display: none;
+}
+.rdrDateDisplayItem{
+  /* box-shadow: none !important; */
+  background: #EEEBE1 !important;
+  /* background: transparent !important; */
+  /* border:none */
+}
+.rdrDateDisplayItemActive{
+  border:none !important;
+}
+
+
+.rdrDayDisabled{
+  background: #EEEBE1 !important;
+}
+
+.rdrMonthAndYearWrapper{
+  background: #EEEBE1 !important;
+  }
+
+
+
+    .MuiPickersPopper-paper {
+      background:#EEEBE1 !important
+    }
+
+
+    .zoom-range {
+      width:100%;
+      -moz-appearance: none;
+      appearance: none;
+      height: 4px;
+      background: #696864;
+      width: 100%;
+    border-radius: 6px;
+    }
+
+  
+
+  
+    .zoom-range::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      border: 2px solid #FFFFFF;
+      background: #D8D5CC;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      transition: box-shadow 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    }
+
+
+    
+.controls:hover input[type='range']::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px 2px rgba(63, 81, 181, 0.16);
+  border-radius: 50%;
+}
+
+.controls:hover input[type='range']::-moz-range-thumb {
+  box-shadow: 0px 0px 0px 2px rgba(63, 81, 181, 0.16);
+}
+
+
+.carousel .slide img {
+  max-height: 650px;
+  width: auto;
+  padding: 50px !important
+}
+
+@media (max-width: 850px) {
+.carousel .slide img {
+    width: auto;
+    padding: 0px !important
+  }}
+  
+@media (max-width: 600px) {
+      .carousel .slide img {
+        width: auto;
+      }
+      .carousel{
+        position: absolute;
+        left: 50%;
+        top:50%;
+        transform: translate(-50%,-50%);
+      }
+    }
+
+   @media (min-width: 1500px) {
+              .carousel .slide img {
+                max-height: 70vh;
+                width: auto;
+                padding: 100px !important
+              }
+            }
+                         @media (min-width: 2000px) {
+                           .carousel .slide img {
+                             max-height: 80vh;
+                             width: auto;
+                             padding: 100px !important
+                           }
+                         }
+
+.carousel .thumbs-wrapper {
+  margin: 0px !important
+}
+
+.carousel .thumb {
+  margin: 0px !important;
+  border: none !important;
+  padding: 2px 1px !important;
+}
+
+.carousel .thumb img {
+  height: 275px !important;
+}
+
+.carousel .thumbs{
+  height: 279px !important;
+}
+.carousel-dir{
+  position: relative;
+  height: 100vh !important;
+  direction: initial;
+}
+
+.carousel .carousel-status{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  top:5%;
+  font-size: 13px !important;
+  text-align: center!important;
+  margin: 20px 0px !important;
+  padding:0px !important
+}
+
+
+@keyframes slide-up {
+  from {
+    margin-bottom: -36rem;    
+  }
+  to {
+    margin-bottom: 0px;
+  }
+}
+
+
+.img-list{
+  &::-webkit-scrollbar {
+      background: transparent;
+      -webkit-appearance: none;
+      width: 0;
+      height: 0;
+    }
+}
