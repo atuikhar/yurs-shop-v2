@@ -28,27 +28,37 @@ import { PersistGate } from 'redux-persist/lib/integration/react';
 
 // ----------------------------------------------------------------------
 
+import { ClerkProvider } from '@clerk/clerk-react';
+
+if (!import.meta.env.VITE_CLERK_PUBLISHABLE_KEY) {
+  throw new Error('Missing Publishable Key');
+}
+
+const clerkPubKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
+
 export default function App() {
   return (
-    <ReduxProvider store={store}>
-      <HelmetProvider>
-        <PersistGate loading={null} persistor={persistor}>
-          <SettingsProvider>
-            <BrowserRouter>
-              <ScrollToTop />
-              <MotionLazyContainer>
-                <ThemeProvider>
-                  <ThemeSettings>
-                    <SnackbarProvider>
-                      <Router />
-                    </SnackbarProvider>
-                  </ThemeSettings>
-                </ThemeProvider>
-              </MotionLazyContainer>
-            </BrowserRouter>
-          </SettingsProvider>
-        </PersistGate>
-      </HelmetProvider>
-    </ReduxProvider>
+    <ClerkProvider publishableKey={clerkPubKey}>
+      <ReduxProvider store={store}>
+        <HelmetProvider>
+          <PersistGate loading={null} persistor={persistor}>
+            <SettingsProvider>
+              <BrowserRouter>
+                <ScrollToTop />
+                <MotionLazyContainer>
+                  <ThemeProvider>
+                    <ThemeSettings>
+                      <SnackbarProvider>
+                        <Router />
+                      </SnackbarProvider>
+                    </ThemeSettings>
+                  </ThemeProvider>
+                </MotionLazyContainer>
+              </BrowserRouter>
+            </SettingsProvider>
+          </PersistGate>
+        </HelmetProvider>
+      </ReduxProvider>
+    </ClerkProvider>
   );
 }

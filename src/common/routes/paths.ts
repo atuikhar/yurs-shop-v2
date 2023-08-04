@@ -10,5 +10,5 @@ const DOMAIN_ROOT = '';
 
 export const PATH_DOMAIN = {
   root: DOMAIN_ROOT,
-  home: path(DOMAIN_ROOT, '/home'),
+  shop: path(DOMAIN_ROOT, '/yurs/shop'),
 };

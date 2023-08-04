@@ -5,23 +5,40 @@ import CompactLayout from '../../layouts/compact';
 import DashboardLayout from '../../layouts/dashboard';
 
 // config
-import { PATH_AFTER_LOGIN } from '../../config-global';
-//
-import { HomePage, Page404, NextPage } from './elements';
+import { Page404, Welcome, Shop } from './elements';
+
+import AuthGuard from '@/auth-guard/index';
+import { SignIn, SignUp } from '@clerk/clerk-react';
 
 // ----------------------------------------------------------------------
 
 export default function Router() {
   return useRoutes([
     {
-      path: '',
-      element: <DashboardLayout />,
+      path: '/',
+      element: <Welcome />,
+    },
+    {
+      path: '/sign-in',
+      element: <SignIn routing="path" path="/sign-in" />,
+    },
+    {
+      path: '/sign-up',
+      element: <SignUp routing="path" path="/sign-up" />,
+    },
+    {
+      path: '/yurs',
+      element: (
+        <AuthGuard>
+          <DashboardLayout />
+        </AuthGuard>
+      ),
       children: [
-        { element: <Navigate to={PATH_AFTER_LOGIN} replace />, index: true },
-        { path: 'home', element: <HomePage /> },
-        { path: 'next', element: <NextPage /> },
+        { element: <Navigate to="/shop" replace />, index: true },
+        { path: 'shop', element: <Shop /> },
       ],
     },
+
     {
       element: <CompactLayout />,
       children: [{ path: '404', element: <Page404 /> }],
