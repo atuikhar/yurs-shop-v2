@@ -34,9 +34,9 @@ if (!import.meta.env.VITE_CLERK_PUBLISHABLE_KEY) {
   throw new Error('Missing Publishable Key');
 }
 
-export default function App() {
-  const clerkPubKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
+const clerkPubKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
+export default function App() {
   return (
     <ClerkProvider publishableKey={clerkPubKey}>
       <ReduxProvider store={store}>
