@@ -16,12 +16,12 @@ export default defineConfig(() => {
       'process.env': {},
     },
     build: {
+      commonjsOptions: {
+        transformMixedEsModules: true,
+      },
       outDir: path.resolve(__dirname, 'dist'),
       chunkSizeWarningLimit: 1600,
       rollupOptions: {
-        input: {
-          main: resolve(__dirname, 'index.html'),
-        },
         output: {
           manualChunks(id) {
             if (id.includes('node_modules')) {
