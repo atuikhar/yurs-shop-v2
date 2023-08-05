@@ -36,6 +36,7 @@ if (!import.meta.env.VITE_REACT_APP_CLERK_PUBLISHABLE_KEY) {
 const clerkPubKey = import.meta.env.VITE_REACT_APP_CLERK_PUBLISHABLE_KEY;
 
 export default function App() {
+  console.log(clerkPubKey);
   return (
     <ClerkProvider publishableKey={clerkPubKey}>
       <ReduxProvider store={store}>
