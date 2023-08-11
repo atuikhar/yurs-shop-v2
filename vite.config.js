@@ -31,6 +31,7 @@ export default defineConfig(() => {
         },
       },
     },
+    base: '/yurs-shop-v2.git/',
     plugins: [react()],
   };
 });
