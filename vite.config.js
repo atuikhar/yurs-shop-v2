@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import path from 'path';
 import react from '@vitejs/plugin-react';
+import reactRefresh from '@vitejs/plugin-react-refresh';
 
 export default defineConfig(() => {
   return {
@@ -17,6 +18,7 @@ export default defineConfig(() => {
         transformMixedEsModules: true,
       },
       outDir: path.resolve(__dirname, 'dist'),
+      minify: true,
       chunkSizeWarningLimit: 1600,
       rollupOptions: {
         output: {
@@ -28,6 +30,6 @@ export default defineConfig(() => {
         },
       },
     },
-    plugins: [react()],
+    plugins: [react(), reactRefresh()],
   };
 });
