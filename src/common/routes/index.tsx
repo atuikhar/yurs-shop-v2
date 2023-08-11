@@ -28,7 +28,11 @@ export default function Router() {
     },
     {
       path: '/yurs',
-      element: <DashboardLayout />,
+      element: (
+        <AuthGuard>
+          <DashboardLayout />
+        </AuthGuard>
+      ),
       children: [
         { element: <Navigate to="/shop" replace />, index: true },
         { path: 'shop', element: <Shop /> },
