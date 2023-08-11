@@ -7,14 +7,15 @@ import reportWebVitals from './reportWebVitals';
 import { ClerkProvider } from '@clerk/clerk-react';
 
 // ----------------------------------------------------------------------
+
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+
 if (!import.meta.env.VITE_REACT_APP_CLERK_PUBLISHABLE_KEY) {
   throw new Error('Missing Publishable Key');
 }
-const clerkPubKey = import.meta.env.VITE_REACT_APP_CLERK_PUBLISHABLE_KEY;
-const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
 root.render(
-  <ClerkProvider publishableKey={clerkPubKey}>
+  <ClerkProvider publishableKey={import.meta.env.VITE_REACT_APP_CLERK_PUBLISHABLE_KEY}>
     <App />
   </ClerkProvider>
 );
