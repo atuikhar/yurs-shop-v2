@@ -4,10 +4,10 @@ import { PATH_DOMAIN } from '@/common/routes/paths';
 // API
 // ----------------------------------------------------------------------
 
-export const HOST_API_KEY = process.env.REACT_APP_HOST_API_KEY || '';
+export const HOST_API_KEY = import.meta.env.VITE_REACT_APP_HOST_API_KEY || '';
 
 // ROOT PATH AFTER LOGIN SUCCESSFUL
-export const PATH_AFTER_LOGIN = PATH_DOMAIN.home;
+export const PATH_AFTER_LOGIN = PATH_DOMAIN.shop;
 
 // LAYOUT
 // ----------------------------------------------------------------------
