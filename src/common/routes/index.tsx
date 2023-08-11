@@ -7,6 +7,9 @@ import DashboardLayout from '../../layouts/dashboard';
 // config
 import { Page404, Welcome, Shop } from './elements';
 
+import AuthGuard from '@/auth-guard/index';
+import { SignIn, SignUp } from '@clerk/clerk-react';
+
 // ----------------------------------------------------------------------
 
 export default function Router() {
@@ -16,8 +19,20 @@ export default function Router() {
       element: <Welcome />,
     },
     {
+      path: '/sign-in',
+      element: <SignIn routing="path" path="/sign-in" />,
+    },
+    {
+      path: '/sign-up',
+      element: <SignUp routing="path" path="/sign-up" />,
+    },
+    {
       path: '/yurs',
-      element: <DashboardLayout />,
+      element: (
+        <AuthGuard>
+          <DashboardLayout />
+        </AuthGuard>
+      ),
       children: [
         { element: <Navigate to="/shop" replace />, index: true },
         { path: 'shop', element: <Shop /> },

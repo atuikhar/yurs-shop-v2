@@ -4,21 +4,11 @@ import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 
-import { ClerkProvider } from '@clerk/clerk-react';
-
 // ----------------------------------------------------------------------
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
-if (!import.meta.env.VITE_REACT_APP_CLERK_PUBLISHABLE_KEY) {
-  throw new Error('Missing Publishable Key');
-}
-
-root.render(
-  <ClerkProvider publishableKey={import.meta.env.VITE_REACT_APP_CLERK_PUBLISHABLE_KEY}>
-    <App />
-  </ClerkProvider>
-);
+root.render(<App />);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
