@@ -3,6 +3,7 @@ frontend:
   phases:
     preBuild:
       commands:
+        - env | grep -e VITE_REACT_APP_CLERK_PUBLISHABLE_KEY >> .env.VITE_REACT_APP_CLERK_PUBLISHABLE_KEY
         - yarn install
     build:
       commands:
